@@ -1,0 +1,10 @@
+img {
+  width:50%;
+  height:auto;
+  margin-right:25%;
+  margin-left:25%;
+}
+
+.game-window {
+  box-shadow: 0 0 11px 1.5px #24104c;
+}
