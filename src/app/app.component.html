@@ -8,8 +8,8 @@
     <a class="choice" routerLink='{{game}}/game'>Game</a>
     <a class="choice" routerLink='{{game}}/about'>About</a>
   </nav>
-  <div class="router">
-    <router-outlet>
+  <div class="router" [@routerAnimation]="getRouteAnimation(route)">
+    <router-outlet #route="outlet">
     </router-outlet>
   </div>
 </div>
