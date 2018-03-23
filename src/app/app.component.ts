@@ -22,7 +22,8 @@ import { ActivatedRoute } from '@angular/router';
         query(':enter',
           style({
             position: 'fixed',
-            transform: 'translateX(-100%)'
+            transform: 'translateX(-100%)',
+            zIndex: '0',
           }),
           {optional:true}),
 
