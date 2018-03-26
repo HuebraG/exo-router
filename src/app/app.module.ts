@@ -3,20 +3,13 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
-import { BeyondTheVoidGameComponent } from './beyond-the-void-game/beyond-the-void-game.component';
-import { BeyondTheVoidAboutComponent } from './beyond-the-void-about/beyond-the-void-about.component';
-import { NexiumRushGameComponent } from './nexium-rush-game/nexium-rush-game.component';
-import { NexiumRushAboutComponent } from './nexium-rush-about/nexium-rush-about.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BeyondTheVoidGameComponent,
-    BeyondTheVoidAboutComponent,
-    NexiumRushGameComponent,
-    NexiumRushAboutComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

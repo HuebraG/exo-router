@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\btv\\beyond-the-void-game"
   ],
-  "SelectedNode": "\\src\\app\\app.component.css",
+  "SelectedNode": "\\src\\app\\app-routing.module.ts",
   "PreviewInSolutionExplorer": false
 }

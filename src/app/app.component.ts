@@ -27,7 +27,7 @@ import { ActivatedRoute } from '@angular/router';
           }),
           {optional:true}),
 
-        // move page in screen from left to right
+        // move page in screen from left to right, passant en dessous du menu de gauche
         query(':enter',
           animate('500ms ease',
             style({
@@ -35,13 +35,16 @@ import { ActivatedRoute } from '@angular/router';
               transform: 'translateX(0%)'
             })
           ),
-        {optional:true}),
+  
+          { optional: true }),
+
       ])
     ])
   ]
 })
 export class AppComponent {
 
+  //variable utilisée pour récupérer le nom du jeu
   private game: string;
 
   constructor() { 
@@ -52,10 +55,12 @@ export class AppComponent {
     this.game = "beyond-the-void";
   }
 
-  choixDuJeu(chaine: string): void {
-    this.game = chaine;
+  //on récupère le nom du jeu
+  gameChoice(gameName: string): void {
+    this.game = gameName;
   }
 
+  //permet de récupérer la string stockée dans animation pour pouvoir utiliser les animations
   getRouteAnimation(outlet) {
     return outlet.activatedRouteData.animation;
   }
