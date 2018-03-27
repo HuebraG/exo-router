@@ -8,6 +8,8 @@ import {
   query,
 } from '@angular/animations';
 import { ActivatedRoute } from '@angular/router';
+import { AppService } from './app.service';
+
 
 
 
@@ -45,10 +47,12 @@ import { ActivatedRoute } from '@angular/router';
 export class AppComponent {
 
   //variable utilisée pour récupérer le nom du jeu
-  private game: string;
+  public game: string;
+  public name: string;
 
-  constructor() { 
-    
+  constructor(private appService: AppService) {
+    this.appService.getName()
+      .subscribe(name => this.name = name);
   }
 
   ngOnInit(): void {
@@ -56,13 +60,23 @@ export class AppComponent {
   }
 
   //on récupère le nom du jeu
-  gameChoice(gameName: string): void {
+  public gameChoice(gameName: string): void {
     this.game = gameName;
   }
 
   //permet de récupérer la string stockée dans animation pour pouvoir utiliser les animations
-  getRouteAnimation(outlet) {
+  public getRouteAnimation(outlet) {
     return outlet.activatedRouteData.animation;
   }
+  
+  public getName(): void {
+    this.appService.getName()
+      .subscribe(name => this.name = name);
+  }
 
+  public setName(name: string): void {
+    this.appService.setName(name);
+    this.getName();
+  }
+  
 }
