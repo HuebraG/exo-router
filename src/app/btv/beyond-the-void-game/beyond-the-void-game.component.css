@@ -8,3 +8,8 @@ img {
 .game-window {
   box-shadow: 0 0 11px 1.5px #24104c;
 }
+
+p {
+  position : absolute;
+  top: 65px;
+}

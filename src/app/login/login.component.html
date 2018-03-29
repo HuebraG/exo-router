@@ -1,3 +1,5 @@
-<input [(ngModel)]="name" />
-<button type="submit" (click)="sendName(name)">Bonsoir</button>
-<p></p>
+<p>Your name</p>
+<form>
+  <input #name />
+  <button type="reset" (click)="sendName(name.value)">Login</button>
+</form>

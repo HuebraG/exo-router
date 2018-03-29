@@ -7,7 +7,7 @@ import {
   transition,
   query,
 } from '@angular/animations';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { AppService } from './app.service';
 
 
@@ -25,6 +25,7 @@ import { AppService } from './app.service';
           style({
             position: 'fixed',
             transform: 'translateX(-100%)',
+            //permet de passer en dessous du premier nav
             zIndex: '0',
           }),
           {optional:true}),
@@ -48,15 +49,15 @@ export class AppComponent {
 
   //variable utilisée pour récupérer le nom du jeu
   public game: string;
-  public name: string;
+  public username: string;
 
-  constructor(private appService: AppService) {
-    this.appService.getName()
-      .subscribe(name => this.name = name);
+
+  constructor(private appService: AppService, private router: Router) {
+    /* problème ici : ne renvoie que '/', même si on reload la page à une adresse spécifique*/
+    this.game = this.router.url;
   }
 
   ngOnInit(): void {
-    this.game = "beyond-the-void";
   }
 
   //on récupère le nom du jeu
@@ -68,15 +69,9 @@ export class AppComponent {
   public getRouteAnimation(outlet) {
     return outlet.activatedRouteData.animation;
   }
-  
-  public getName(): void {
-    this.appService.getName()
-      .subscribe(name => this.name = name);
-  }
 
   public setName(name: string): void {
     this.appService.setName(name);
-    this.getName();
   }
   
 }

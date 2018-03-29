@@ -16,6 +16,17 @@ router-outlet {
   height:100%;
 }
 
+app-login {
+  border: 1px solid #3c0433;
+  background-color: #420546;
+  border-radius: 10px;
+  margin: 40px auto 0;
+  padding: 10px 0px;
+  display : flex;
+  flex-direction : column;
+  width : 170px;
+}
+
 nav.game-menu {
   background-color: #261c44;
   height: 60px;
@@ -28,7 +39,7 @@ nav.game-menu {
   border: 1px solid #3c0433;
   background-color: #420546;
   border-radius: 10px;
-  width: 150px;
+  width: 170px;
   height: 30px;
   margin: 40px auto 0;
   text-align: center;
@@ -57,4 +68,3 @@ nav.game-menu {
   height: calc(100% - 60px);
   margin: 0;
 }
-

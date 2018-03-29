@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../../app.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-beyond-the-void-game',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeyondTheVoidGameComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appService : AppService) { }
 
   ngOnInit() {
+
   }
+
 
 }

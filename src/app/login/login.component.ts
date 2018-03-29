@@ -9,13 +9,13 @@ import { EventEmitter } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   @Output() newName = new EventEmitter;
-  public name: string;
-
+  
   constructor() { }
 
   ngOnInit() {
   }
 
+  /*dès qu'on envoie un nom, on notifie le parent via un event*/
   public sendName(name: string): void {
     this.newName.emit(name);
   }
