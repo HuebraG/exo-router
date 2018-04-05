@@ -3,8 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\btv"
+    "\\src\\app\\btv",
+    "\\src\\app\\btv\\beyond-the-void-game",
+    "\\src\\app\\nr",
+    "\\src\\app\\nr\\nexium-rush-game"
   ],
-  "SelectedNode": "\\src\\app\\app.component.ts",
   "PreviewInSolutionExplorer": false
 }

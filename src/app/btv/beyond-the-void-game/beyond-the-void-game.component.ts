@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
 import { Observable } from 'rxjs/Observable';
 
+
 @Component({
   selector: 'app-beyond-the-void-game',
   templateUrl: './beyond-the-void-game.component.html',
@@ -9,11 +10,17 @@ import { Observable } from 'rxjs/Observable';
 })
 export class BeyondTheVoidGameComponent implements OnInit {
 
-  constructor(private appService : AppService) { }
+  public name$: Observable<string>;
+
+  constructor(private appService: AppService) {
+    this.name$ = this.appService.name.asObservable();
+  }
 
   ngOnInit() {
 
+
   }
+
 
 
 }

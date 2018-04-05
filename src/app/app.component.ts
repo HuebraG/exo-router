@@ -71,7 +71,7 @@ export class AppComponent {
   }
 
   public setName(name: string): void {
-    this.appService.setName(name);
+   this.appService.changeName(name);
   }
   
 }

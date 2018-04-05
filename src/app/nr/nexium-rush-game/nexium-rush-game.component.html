@@ -1,4 +1,4 @@
 <h1>Nexium Rush</h1>
 <!-- récupère l'observable du nom. dès qu'il change, update le changement-->
-<p *ngIf="appService.getName() | async">Welcome {{appService.getName() | async}}</p>
+<p *ngIf="name$ | async">Welcome {{name$ | async}}</p>
 <img class="game-window" src="../../assets/demineur.png" />
